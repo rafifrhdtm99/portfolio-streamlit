@@ -201,8 +201,12 @@ button { cursor: none; font-family: var(--font); border: none; background: none;
 
 .hero-content {
   position: relative; z-index: 1;
-  max-width: 900px; margin: 0 auto;
-  padding: 140px 60px 80px;
+  max-width: 1200px; margin: 0 auto;
+  padding: 140px 40px 80px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
 }
 
 .hero-badge {
@@ -1372,6 +1376,208 @@ footer {
     width: 100%;
     max-width: 320px;
     align-self: center;
+  }
+}
+
+/* ===========================
+   HERO DASHBOARD GRAPHICS
+=========================== */
+.hero-graphic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.dashboard-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 380px;
+}
+.db-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35),
+              inset 0 0 0 1px rgba(255,255,255,0.03);
+  transition: transform 0.4s ease, border-color 0.4s, box-shadow 0.4s;
+  z-index: 2;
+}
+.db-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(167, 139, 250, 0.25);
+  box-shadow: 0 20px 40px rgba(167,139,250,0.15),
+              inset 0 0 0 1px rgba(167,139,250,0.08);
+}
+.db-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at 50% 0%, rgba(167, 139, 250, 0.12), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Card Positions (Floating layout) */
+.card-shopee {
+  top: 10px;
+  left: 0;
+  width: 280px;
+  animation: float-slow 6s ease-in-out infinite alternate;
+}
+.card-tiktok {
+  top: 130px;
+  right: 0;
+  width: 240px;
+  animation: float-medium 5s ease-in-out infinite alternate-reverse;
+  animation-delay: 1s;
+}
+.card-meta {
+  bottom: 10px;
+  left: 30px;
+  width: 260px;
+  animation: float-fast 7s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+
+@keyframes float-slow {
+  from { transform: translateY(0px) rotate(0deg); }
+  to { transform: translateY(-12px) rotate(1deg); }
+}
+@keyframes float-medium {
+  from { transform: translateY(0px) rotate(0deg); }
+  to { transform: translateY(-10px) rotate(-1.5deg); }
+}
+@keyframes float-fast {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+/* Inside Cards */
+.db-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.db-platform {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.shopee-text { color: #FF5500; }
+.tiktok-text { color: #00F2FE; }
+.meta-text { color: #1877F2; }
+
+.db-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00FF66;
+  box-shadow: 0 0 6px #00FF66;
+}
+.db-status-ok {
+  font-size: 10px;
+  background: rgba(0, 255, 102, 0.1);
+  color: #00FFBB;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.db-badge-trend {
+  font-size: 10px;
+  background: rgba(0, 242, 254, 0.1);
+  color: #00F2FE;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.db-metric-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.db-metric-unit {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.db-metric-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  margin-bottom: 8px;
+}
+.db-chart {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Responsive Scaling for Dashboard Graphics */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .hero-graphic {
+    order: 2;
+    margin-top: 20px;
+  }
+  .dashboard-container {
+    height: 320px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .card-shopee {
+    width: 220px;
+    padding: 14px 18px;
+  }
+  .card-tiktok {
+    top: 100px;
+    width: 200px;
+    padding: 14px 18px;
+  }
+  .card-meta {
+    bottom: 0px;
+    left: 20px;
+    width: 210px;
+    padding: 14px 18px;
+  }
+  .db-metric-value {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .dashboard-container {
+    height: 280px;
+    max-width: 320px;
+  }
+  .card-shopee {
+    width: 180px;
+    top: 0;
+  }
+  .card-tiktok {
+    top: 80px;
+    width: 170px;
+  }
+  .card-meta {
+    bottom: 0;
+    left: 10px;
+    width: 180px;
+  }
+  .db-metric-value {
+    font-size: 18px;
   }
 }
 
