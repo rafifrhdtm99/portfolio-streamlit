@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import base64
 import os
+import re
 
 # Set page config
 st.set_page_config(
@@ -24,43 +25,54 @@ def get_base64_image(path):
             return base64.b64encode(f.read()).decode("utf-8")
     return ""
 
+# Dynamic image inliner
+def inline_images(html):
+    # Find all src="..." or src='...' attributes
+    matches = re.findall(r'src=["\']([^"\']+)["\']', html)
+    for original_path in matches:
+        if original_path.startswith("data:") or original_path.startswith("http"):
+            continue
+            
+        filename = os.path.basename(original_path)
+        candidate_paths = [
+            original_path,
+            filename,
+            f"images/{filename}"
+        ]
+        
+        found_path = None
+        for p in candidate_paths:
+            if os.path.exists(p):
+                found_path = p
+                break
+                
+        if found_path:
+            img_b64 = get_base64_image(found_path)
+            if img_b64:
+                ext = os.path.splitext(found_path)[1].lower()
+                mime_type = "image/png" if ext == ".png" else "image/jpeg"
+                if ext == ".gif":
+                    mime_type = "image/gif"
+                elif ext == ".svg":
+                    mime_type = "image/svg+xml"
+                
+                # Replace in HTML
+                html = html.replace(f'src="{original_path}"', f'src="data:{mime_type};base64,{img_b64}"')
+                html = html.replace(f"src='{original_path}'", f"src='data:{mime_type};base64,{img_b64}'")
+    return html
+
 # Rebuild single-file HTML
 def build_html():
     html = read_file("index.html")
     css = read_file("style.css")
     js = read_file("script.js")
     
-    # Try multiple paths for the avatar image
-    possible_paths = [
-        "images/rafif.jpg",
-        "rafif.jpg",
-        "images/rafif.png",
-        "rafif.png",
-        "images/rafif.jpeg",
-        "rafif.jpeg",
-        "images/rafif.JPG",
-        "rafif.JPG",
-        "images/rafif.PNG",
-        "rafif.PNG"
-    ]
-    
-    img_b64 = ""
-    found_path = ""
-    for path in possible_paths:
-        if os.path.exists(path):
-            img_b64 = get_base64_image(path)
-            if img_b64:
-                found_path = path
-                break
-    
     # Inline CSS & JS
     html = html.replace('<link rel="stylesheet" href="style.css" />', f'<style>{css}</style>')
     html = html.replace('<script src="script.js"></script>', f'<script>{js}</script>')
     
-    # Inline Image
-    if img_b64:
-        mime_type = "image/png" if found_path.lower().endswith(".png") else "image/jpeg"
-        html = html.replace('src="images/rafif.jpg"', f'src="data:{mime_type};base64,{img_b64}"')
+    # Inline all images dynamically
+    html = inline_images(html)
         
     return html
 

@@ -36,6 +36,7 @@
       <li><a href="#about" class="nav-link" data-section="about">About</a></li>
       <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
       <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#certifications" class="nav-link" data-section="certifications">Certificates</a></li>
       <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
       <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
     </ul>
@@ -205,7 +206,7 @@
               <div>
                 <span class="exp-company">PT. Lautan Rejeki Abadi</span>
                 <h3 class="exp-role">Digital Marketing Supervisor</h3>
-                <span class="exp-period">📅 Sep 2025 – Sekarang · 10 Bulan</span>
+                <span class="exp-period">📅 Mar 2025 – Sep 2025 · 7 Bulan</span>
               </div>
             </div>
             <p class="exp-desc">
@@ -466,11 +467,67 @@
     </div>
   </section>
 
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 — Certifications</span>
+        <h2 class="section-title">Sertifikasi &amp; <span class="gradient-text">Pelatihan</span></h2>
+      </div>
+
+      <div class="certifications-grid">
+        <div class="cert-card glass-card">
+          <div class="cert-img-container">
+            <img src="images/myskill-cert.png" alt="MySkill Digital Marketing Bootcamp Certificate" class="cert-img" onclick="openCertModal(this.src)" />
+          </div>
+          <div class="cert-info">
+            <span class="cert-provider">MySkill Intensive Bootcamp</span>
+            <h3>Digital Marketing: Fullstack Intensive Bootcamp</h3>
+            <span class="cert-date">📅 Februari 19, 2025 – Mei 2, 2025 · Batch 29</span>
+            <p class="cert-desc">
+              Program pelatihan intensif berskala penuh (Fullstack) yang membekali dengan keahlian strategis dan praktis 
+              untuk merancang, mengeksekusi, dan mengoptimalkan kampanye digital marketing bernilai konversi tinggi.
+            </p>
+            <div class="cert-topics-toggle">
+              <button class="btn-ghost btn-sm" onclick="toggleTopics()">
+                <span>Lihat Silabus &amp; Topik Bootcamp</span>
+                <svg class="expand-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            
+            <div class="cert-topics-content" id="certTopics">
+              <div class="topics-split">
+                <div class="topics-text">
+                  <h4>Topik yang Dikuasai:</h4>
+                  <ul class="topics-list">
+                    <li>✓ Fundamentals of Marketing &amp; Brand Strategy</li>
+                    <li>✓ Audience Persona &amp; Digital Marketing Framework</li>
+                    <li>✓ Campaign Media Planning &amp; Content Strategy</li>
+                    <li>✓ Creative Copywriting &amp; Social Media Strategy</li>
+                    <li>✓ Paid Ads (Meta Ads, TikTok Ads, Google Ads)</li>
+                    <li>✓ E-commerce Marketing &amp; Optimization</li>
+                    <li>✓ Search Engine Optimization (SEO On-Page &amp; Off-Page)</li>
+                    <li>✓ Web Analytics (Google Analytics 4)</li>
+                    <li>✓ Customer Relationship Management (CRM)</li>
+                  </ul>
+                </div>
+                <div class="topics-img-container">
+                  <img src="images/myskill-topics.png" alt="MySkill Bootcamp Topics" class="topics-img" onclick="openCertModal(this.src)" />
+                  <span class="img-zoom-label">🔍 Klik untuk memperbesar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PORTFOLIO SECTION -->
   <section id="portfolio">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">04 — Portfolio</span>
+        <span class="section-tag">05 — Portfolio</span>
         <h2 class="section-title">Project <span class="gradient-text">Highlights</span></h2>
       </div>
 
@@ -940,7 +997,7 @@
   <section id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">05 — Contact</span>
+        <span class="section-tag">06 — Contact</span>
         <h2 class="section-title">Let's <span class="gradient-text">Connect!</span></h2>
         <p class="section-subtitle">Tertarik bekerja sama? Saya terbuka untuk diskusi project, freelance, maupun posisi full-time.</p>
       </div>
@@ -1044,6 +1101,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- CERTIFICATE MODAL -->
+  <div class="cert-modal" id="certModal">
+    <button class="cert-modal-close" id="certModalClose">&times;</button>
+    <img class="cert-modal-content" id="certModalImg" src="" alt="Certificate Preview" />
+  </div>
 
   <script src="script.js"></script>
 </body>

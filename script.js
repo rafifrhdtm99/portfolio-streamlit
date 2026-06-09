@@ -345,3 +345,57 @@ window.toggleCaseDetail = function(btn) {
   }
 };
 
+// ==============================
+// CERTIFICATIONS & SYLLABUS TOPICS
+// ==============================
+window.toggleTopics = function() {
+  const content = document.getElementById('certTopics');
+  const btn = content.previousElementSibling.querySelector('button');
+  const arrow = btn.querySelector('.expand-arrow');
+  
+  if (content.classList.contains('open')) {
+    content.classList.remove('open');
+    content.style.maxHeight = null;
+    arrow.style.transform = 'rotate(0deg)';
+  } else {
+    content.classList.add('open');
+    content.style.maxHeight = content.scrollHeight + "px";
+    arrow.style.transform = 'rotate(180deg)';
+  }
+};
+
+window.openCertModal = function(src) {
+  const modal = document.getElementById('certModal');
+  const modalImg = document.getElementById('certModalImg');
+  if (modal && modalImg) {
+    modalImg.src = src;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('certModal');
+  const closeBtn = document.getElementById('certModalClose');
+  
+  if (modal && closeBtn) {
+    const closeModal = () => {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+});
+
