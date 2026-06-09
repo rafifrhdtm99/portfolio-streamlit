@@ -29,7 +29,29 @@ def build_html():
     html = read_file("index.html")
     css = read_file("style.css")
     js = read_file("script.js")
-    img_b64 = get_base64_image("images/rafif.jpg")
+    
+    # Try multiple paths for the avatar image
+    possible_paths = [
+        "images/rafif.jpg",
+        "rafif.jpg",
+        "images/rafif.png",
+        "rafif.png",
+        "images/rafif.jpeg",
+        "rafif.jpeg",
+        "images/rafif.JPG",
+        "rafif.JPG",
+        "images/rafif.PNG",
+        "rafif.PNG"
+    ]
+    
+    img_b64 = ""
+    found_path = ""
+    for path in possible_paths:
+        if os.path.exists(path):
+            img_b64 = get_base64_image(path)
+            if img_b64:
+                found_path = path
+                break
     
     # Inline CSS & JS
     html = html.replace('<link rel="stylesheet" href="style.css" />', f'<style>{css}</style>')
@@ -37,7 +59,8 @@ def build_html():
     
     # Inline Image
     if img_b64:
-        html = html.replace('src="images/rafif.jpg"', f'src="data:image/jpeg;base64,{img_b64}"')
+        mime_type = "image/png" if found_path.lower().endswith(".png") else "image/jpeg"
+        html = html.replace('src="images/rafif.jpg"', f'src="data:{mime_type};base64,{img_b64}"')
         
     return html
 
