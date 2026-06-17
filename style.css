@@ -314,20 +314,25 @@ canvas {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 80px 0 60px;
+  padding: 80px 0 20px;
 }
 
 @media (max-width: 768px) {
   #hero {
     align-items: flex-start;
     padding-top: 90px;
+    padding-bottom: 20px;
   }
 }
 
 .hero-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .orb {
@@ -638,46 +643,15 @@ canvas {
   margin-top: 12px;
 }
 
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.scroll-line {
-  width: 1px;
-  height: 30px;
-  background: linear-gradient(to bottom, var(--yellow), transparent);
-  animation: scrollDown 2s infinite;
-}
-
-@keyframes scrollDown {
-  0% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-}
-
-.hero-scroll-indicator span {
-  font-size: 0.7rem;
-  color: var(--white-dim);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
 /* ========== SECTIONS ========== */
 section {
-  padding: 80px 0;
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+#about {
+  padding-top: 40px;
 }
 
 .section-header {
@@ -994,24 +968,16 @@ section {
   gap: 14px;
 }
 
-.skill-item {}
-
-.skill-info {
+.skill-item {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.skill-info span:first-child {
+.skill-name {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--white);
-}
-
-.skill-level {
-  font-size: 0.75rem;
-  color: var(--yellow);
-  font-weight: 600;
 }
 
 .skill-bar {
