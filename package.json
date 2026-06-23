@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-streamlit",
+  "version": "1.0.0",
+  "description": "Rafif Rohadiatama — Digital Marketing Portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "deploy": "wrangler pages deploy ."
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

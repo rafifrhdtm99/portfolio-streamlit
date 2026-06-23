@@ -1,0 +1,14 @@
+name = "portfolio-streamlit"
+compatibility_date = "2026-06-18"
+
+[site]
+bucket = "."
+
+[build]
+command = ""
+publish = "."
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
