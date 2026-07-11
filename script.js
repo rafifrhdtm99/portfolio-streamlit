@@ -1005,13 +1005,12 @@ if (contactForm) {
 // ==============================
 const REPORTS = {
   autoglaze: [
-    { src: "images/Screenshot 2026-07-11 202432.png", caption: "Report Meta Ads campaign Autoglaze — Lead Gen Jabodetabek. Total 342 leads, spend Rp 6,3 jt, biaya per lead Rp 18.500, CTR 2,1%." },
-    { src: "images/Screenshot 2026-07-11 202532.png", caption: "Bagi adset: LAL 1% paling murah (150 leads, ~Rp15rb/lead), Broad 100 leads, Interest 92 leads." },
-    { src: "images/Screenshot 2026-07-11 202744.png", caption: "A/B test creative: Video A 180 leads (CTR 2,5%), Image B 162 leads (CTR 1,7%). Video menang." },
-    { src: "images/Screenshot 2026-07-11 202827.png", caption: "Iklan Facebook — headline promo coating, tombol 'Kirim Pesan' langsung ke chat." },
-    { src: "images/Screenshot 2026-07-11 202849.png", caption: "Iklan Instagram — 'Coating Mobil Mulai 1 Jutaan!', sasaran Jabodetabek." },
-    { src: "images/Screenshot 2026-07-11 202905.png", caption: "Lead form di dalam Meta — isi Nama, Telepon, Email & Cabang. Konversi tanpa keluar aplikasi." },
-    { src: "images/Screenshot 2026-07-11 203725.png", caption: "Rekap performa Meta Ads — traffic dan konversi dari campaign ini." }
+    { src: "images/Screenshot 2026-07-11 202432.png", caption: "Campaign bundling product yang mengarahkan langsung ke link produk Shopee. Dari hasil iklan ini mendapatkan penjualan ±1.500.000, ROAS yang didapat 10x." },
+    { src: "images/Screenshot 2026-07-11 202532.png", caption: "Campaign Awareness layanan detailing mobil menjangkau biaya per hasil termurah dengan mendapatkan jangkauan 170rb++." },
+    { src: "images/Screenshot 2026-07-11 202744.png", caption: "Campaign PPF/pelindung bodi mobil dengan value 20-40 juta, mendapatkan 121 pesan ke sales dan closing 4 customer." },
+    { src: "images/Screenshot 2026-07-11 202827.png", caption: "Campaign layanan membership value 900 rb - 1,8 juta, mendapatkan 266 pesan ke sales dan closing sekitar 30 juta." },
+    { src: "images/Screenshot 2026-07-11 202849.png", caption: "Campaign membership dengan value 900 rb mendapatkan 65 leads prospek, dengan closing 39 customer." },
+    { src: "images/Screenshot 2026-07-11 202905.png", caption: "Campaign Awareness Kemitraan dengan value 100 juta++, menjangkau lebih dari 500rb++ orang dan closing 1 customer." }
   ]
 };
 
