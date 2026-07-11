@@ -1982,9 +1982,10 @@ footer {
   transform: translateY(-3px);
   border-color: var(--yellow);
 }
-.skill-emoji {
-  font-size: 1.8rem;
-  line-height: 1;
+.skill-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 .skill-name {
   font-size: 0.85rem;
