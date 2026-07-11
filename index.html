@@ -378,21 +378,21 @@
           </div>
         </div>
 
-        <div class="portfolio-card glass-card">
-          <div class="portfolio-badge">META ADS — MULTI CAMPAIGN</div>
+        <div class="portfolio-card glass-card" data-report="autoglaze">
+          <div class="portfolio-badge">META ADS — LEAD GEN</div>
           <div class="portfolio-info">
-            <h3>639 Chat Sales — CPL Terendah Rp2.557/Chat</h3>
+            <h3>Autoglaze — 342 Leads dari Meta Ads Jabodetabek</h3>
             <p class="portfolio-type">Performance Marketing Specialist</p>
-            <p>Mengelola multi-campaign Meta Ads secara simultan (Percakapan Pesan, Jangkauan, Traffic) untuk klien otomotif. Mengoptimalkan budget dengan A/B testing materi iklan — fokus pada penawaran harga psikologis untuk memaksimalkan konversi chat sales dengan biaya seminimal mungkin.</p>
+            <p>Mengelola campaign Meta Ads "Lead Gen — Jabodetabek" untuk Autoglaze (coating mobil). Hasil: <strong>342 leads</strong> dengan cost per result hanya <strong>Rp 18.500</strong> dari total spend Rp 6,3 juta dan CTR <strong>2,1%</strong>. Split audience LAL 1%, Broad, dan Interest membuktikan mana segmen paling efisien.</p>
             <div class="portfolio-metrics">
-              <div class="metric"><span class="metric-value">639</span><span class="metric-label">CHAT SALES</span></div>
-              <div class="metric"><span class="metric-value">Rp2.557</span><span class="metric-label">CPL TERMURAH</span></div>
-              <div class="metric"><span class="metric-value">334K</span><span class="metric-label">MAX REACH</span></div>
+              <div class="metric"><span class="metric-value">342</span><span class="metric-label">LEADS</span></div>
+              <div class="metric"><span class="metric-value">Rp18.500</span><span class="metric-label">COST / LEAD</span></div>
+              <div class="metric"><span class="metric-value">2,1%</span><span class="metric-label">CTR</span></div>
             </div>
             <div class="portfolio-tags">
-              <span>Meta Ads</span><span>A/B Testing</span><span>Budget Optimization</span>
+              <span>Meta Ads</span><span>Lead Gen</span><span>A/B Testing</span><span>Jabodetabek</span>
             </div>
-            <button class="portfolio-detail-btn">Lihat Detail Strategi Kampanye <span>⌄</span></button>
+            <button class="portfolio-detail-btn" data-report="autoglaze">Lihat Report <span>&rarr;</span></button>
           </div>
         </div>
 
@@ -559,6 +559,22 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- REPORT MODAL (case-study carousel) -->
+  <div class="report-modal" id="reportModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Laporan Kampanye">
+    <div class="report-modal__backdrop" data-close></div>
+    <div class="report-modal__panel glass-card">
+      <button class="report-modal__close" data-close aria-label="Tutup">&times;</button>
+      <div class="report-carousel" id="reportCarousel">
+        <div class="report-carousel__track" id="reportTrack"></div>
+        <button class="report-carousel__arrow report-carousel__arrow--prev" id="reportPrev" aria-label="Sebelumnya">&#8249;</button>
+        <button class="report-carousel__arrow report-carousel__arrow--next" id="reportNext" aria-label="Berikutnya">&#8250;</button>
+      </div>
+      <div class="report-caption" id="reportCaption"></div>
+      <div class="report-dots" id="reportDots"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
