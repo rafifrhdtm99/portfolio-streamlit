@@ -1005,12 +1005,14 @@ if (contactForm) {
 // ==============================
 const REPORTS = {
   autoglaze: [
-    { src: "images/Screenshot 2026-07-11 202432.png", caption: "Campaign bundling product yang mengarahkan langsung ke link produk Shopee. Dari hasil iklan ini mendapatkan penjualan ±1.500.000, ROAS yang didapat 10x." },
-    { src: "images/Screenshot 2026-07-11 202532.png", caption: "Campaign Awareness layanan detailing mobil menjangkau biaya per hasil termurah dengan mendapatkan jangkauan 170rb++." },
-    { src: "images/Screenshot 2026-07-11 202744.png", caption: "Campaign PPF/pelindung bodi mobil dengan value 20-40 juta, mendapatkan 121 pesan ke sales dan closing 4 customer." },
-    { src: "images/Screenshot 2026-07-11 202827.png", caption: "Campaign layanan membership value 900 rb - 1,8 juta, mendapatkan 266 pesan ke sales dan closing sekitar 30 juta." },
-    { src: "images/Screenshot 2026-07-11 202849.png", caption: "Campaign membership dengan value 900 rb mendapatkan 65 leads prospek, dengan closing 39 customer." },
-    { src: "images/Screenshot 2026-07-11 202905.png", caption: "Campaign Awareness Kemitraan dengan value 100 juta++, menjangkau lebih dari 500rb++ orang dan closing 1 customer." }
+    { src: "images/Screenshot 2026-07-11 202432.png", caption: "Slide 1" },
+    { src: "images/Screenshot 2026-07-11 202532.png", caption: "Slide 2" },
+    { src: "images/Screenshot 2026-07-11 202744.png", caption: "Slide 3" },
+    { src: "images/Screenshot 2026-07-11 202827.png", caption: "Slide 4" },
+    { src: "images/Screenshot 2026-07-11 202849.png", caption: "Slide 5" },
+    { src: "images/Screenshot 2026-07-11 202905.png", caption: "Slide 6" },
+    { src: "images/Screenshot 2026-07-11 203725.png", caption: "Slide 7" },
+    { src: "images/Screenshot 2026-07-11 203905.png", caption: "Slide 8" }
   ]
 };
 
