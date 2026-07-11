@@ -1005,14 +1005,13 @@ if (contactForm) {
 // ==============================
 const REPORTS = {
   autoglaze: [
-    { src: "images/Screenshot 2026-07-11 202432.png", caption: "Campaign Meta Ads — Autoglaze Lead Gen Jabodetabek. Total 342 leads, spend Rp 6.327.000, cost per result Rp 18.500, CTR 2,1%, reach 89.432 & 124.512 impressions." },
-    { src: "images/Screenshot 2026-07-11 202532.png", caption: "Breakdown Adset: LAL 1% paling efisien (150 leads, ~Rp 15K/lead), Broad 100 leads, Interest 92 leads. Budget difokuskan ke segmen bertarget." },
-    { src: "images/Screenshot 2026-07-11 202744.png", caption: "A/B testing creative: Video A 180 leads (CTR 2,5%), Image B 162 leads (CTR 1,7%). Video terbukti konversi lebih tinggi." },
-    { src: "images/Screenshot 2026-07-11 202827.png", caption: "Facebook Ad creative — headline promo coating, CTA 'Kirim Pesan' untuk mendorong lead langsung ke chat." },
-    { src: "images/Screenshot 2026-07-11 202849.png", caption: "Instagram Ad creative — 'Coating Mobil Mulai 1 Jutaan!', targeting visual yang menarik perhatian Jabodetabek." },
-    { src: "images/Screenshot 2026-07-11 202905.png", caption: "Lead form di dalam Meta — field Nama, Telepon, Email & Cabang. Konversi tanpa keluar dari platform." },
-    { src: "images/Screenshot 2026-07-11 203725.png", caption: "Google Analytics — Paid Social menyumbang 35% traffic & 120 konversi; bukti campaign berdampak ke situs." },
-    { src: "images/Screenshot 2026-07-11 203905.png", caption: "Tracking lead ke CRM (Google Sheets). Data pelanggan disembunyikan demi privasi.", blur: true }
+    { src: "images/Screenshot 2026-07-11 202432.png", caption: "Report Meta Ads campaign Autoglaze — Lead Gen Jabodetabek. Total 342 leads, spend Rp 6,3 jt, biaya per lead Rp 18.500, CTR 2,1%." },
+    { src: "images/Screenshot 2026-07-11 202532.png", caption: "Bagi adset: LAL 1% paling murah (150 leads, ~Rp15rb/lead), Broad 100 leads, Interest 92 leads." },
+    { src: "images/Screenshot 2026-07-11 202744.png", caption: "A/B test creative: Video A 180 leads (CTR 2,5%), Image B 162 leads (CTR 1,7%). Video menang." },
+    { src: "images/Screenshot 2026-07-11 202827.png", caption: "Iklan Facebook — headline promo coating, tombol 'Kirim Pesan' langsung ke chat." },
+    { src: "images/Screenshot 2026-07-11 202849.png", caption: "Iklan Instagram — 'Coating Mobil Mulai 1 Jutaan!', sasaran Jabodetabek." },
+    { src: "images/Screenshot 2026-07-11 202905.png", caption: "Lead form di dalam Meta — isi Nama, Telepon, Email & Cabang. Konversi tanpa keluar aplikasi." },
+    { src: "images/Screenshot 2026-07-11 203725.png", caption: "Rekap performa Meta Ads — traffic dan konversi dari campaign ini." }
   ]
 };
 
