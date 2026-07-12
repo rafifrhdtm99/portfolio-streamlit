@@ -1025,6 +1025,12 @@ const REPORTS = {
     { src: "images/dunia susu bayi 2.jpeg", caption: "Membuat ide konten, eksekusi, editing hingga FYP." },
     { src: "images/dunia susu bayi 3.jpeg", caption: "Content Creator Freelance." },
     { src: "images/dunia susu bayi 4.jpeg", caption: "Content Creator Freelance." }
+  ]
+  perabot: [
+    { src: "images/perabot murce harian.jpeg", caption: "Hasil harian di Shopee." },
+    { src: "images/perabot murce mingguan.jpeg", caption: "Hasil mingguan di Shopee." },
+    { src: "images/perabot murce bulanan.jpeg", caption: "Hasil bulanan di Shopee." },
+    { src: "images/perabot murce tiktok harian.jpeg", caption: "Hasil harian di TikTok." }
   ]};
 
 (function () {
