@@ -1018,7 +1018,14 @@ const REPORTS = {
     { src: "images/dva.co minguan.png", caption: "Hasil optimasi mingguan DVA Co." },
     { src: "images/dva co. bulanan.png", caption: "Hasil optimasi bulanan DVA Co." }
   ]
-};
+,
+
+  tiktok: [
+    { src: "images/dunia susu bayi 1.jpeg", caption: "Membuat TikTok dari 0 hingga 280rb terjual." },
+    { src: "images/dunia susu bayi 2.jpeg", caption: "Membuat ide konten, eksekusi, editing hingga FYP." },
+    { src: "images/dunia susu bayi 3.jpeg", caption: "Content Creator Freelance." },
+    { src: "images/dunia susu bayi 4.jpeg", caption: "Content Creator Freelance." }
+  ]};
 
 (function () {
   const modal = document.getElementById('reportModal');
